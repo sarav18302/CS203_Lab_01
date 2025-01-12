@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="{{ url_for('add_course') }}" method="POST" class="form-example">
+    <div class="form-example">
+        <label for="code">Course Code: </label>
+        <input type="text" name="code" id="code" required />
+      </div>
+    <div class="form-example">
+        <label for="name">Course Name: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+    <div class="form-example">
+      <label for="instructor">Instructor: </label>
+      <input type="text" name="instructor" id="instructor" required />
+    </div>
+    <div class="form-example">
+      <label for="semester">Semester: </label>
+      <input type="text" name="semester" id="semester" required />
+    </div>
+    <div class="form-example">
+        <label for="schedule">Schedule: </label>
+        <input type="text" name="schedule" id="schedule" required />
+    </div>
+    <div class="form-example">
+        <label for="class">Classroom: </label>
+        <input type="text" name="class" id="class" required />
+    </div>
+    <div class="form-example">
+        <label for="grading">Grading: </label>
+        <input type="text" name="grade" id="grade" required />
+    </div>
+    <div class="form-example">
+        <label for="des">Description: </label>
+        <input type="text" name="des" id="des" required />
+    </div>
+    <div class="form-example">
+      <input type="submit" value="Submit" />
+    </div>
+  </form>
+{% endblock %}
