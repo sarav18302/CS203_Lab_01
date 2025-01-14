@@ -1,41 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="{{ url_for('add_course') }}" method="POST" class="form-example">
-    <div class="form-example">
-        <label for="code">Course Code: </label>
-        <input type="text" name="code" id="code" required />
-      </div>
-    <div class="form-example">
-        <label for="name">Course Name: </label>
-        <input type="text" name="name" id="name" required />
-      </div>
-    <div class="form-example">
-      <label for="instructor">Instructor: </label>
-      <input type="text" name="instructor" id="instructor" required />
+<div class="form-container">
+  <form action="{{ url_for('add_course') }}" method="POST">
+    <div class="form-group">
+      <label for="code">Course Code:</label>
+      <input type="text" name="code" id="code"  />
     </div>
-    <div class="form-example">
-      <label for="semester">Semester: </label>
-      <input type="text" name="semester" id="semester" required />
+    <div class="form-group">
+      <label for="name">Course Name:</label>
+      <input type="text" name="name" id="name"  />
     </div>
-    <div class="form-example">
-        <label for="schedule">Schedule: </label>
-        <input type="text" name="schedule" id="schedule" required />
+    <div class="form-group">
+      <label for="instructor">Instructor:</label>
+      <input type="text" name="instructor" id="instructor"  />
     </div>
-    <div class="form-example">
-        <label for="class">Classroom: </label>
-        <input type="text" name="class" id="class" required />
+    <div class="form-group">
+      <label for="semester">Semester:</label>
+      <input type="text" name="semester" id="semester"  />
     </div>
-    <div class="form-example">
-        <label for="grading">Grading: </label>
-        <input type="text" name="grade" id="grade" required />
+    <div class="form-group">
+      <label for="schedule">Schedule:</label>
+      <input type="text" name="schedule" id="schedule" />
     </div>
-    <div class="form-example">
-        <label for="des">Description: </label>
-        <input type="text" name="des" id="des" required />
+    <div class="form-group">
+      <label for="class">Classroom:</label>
+      <input type="text" name="class" id="class"  />
     </div>
-    <div class="form-example">
-      <input type="submit" value="Submit" />
+    <div class="form-group">
+      <label for="pre">Prerequisties:</label>
+      <input type="text" name="pre" id="pre"  />
+    </div>
+    <div class="form-group">
+      <label for="grading">Grading:</label>
+      <input type="text" name="grade" id="grade"  />
+    </div>
+    <div class="form-group">
+      <label for="des">Description:</label>
+      <input type="text" name="des" id="des" />
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Submit" class="btn-submit" />
     </div>
   </form>
+</div>
 {% endblock %}
